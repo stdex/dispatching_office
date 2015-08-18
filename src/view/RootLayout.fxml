@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RootLayoutController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+            <Menu fx:id="file" mnemonicParsing="false" text="Файл">
+            <items>
+                  <MenuItem fx:id="LogOut" mnemonicParsing="false" onAction="#handleLogOut" text="Выйти из профиля" />
+              <MenuItem fx:id="menuQuit" mnemonicParsing="false" onAction="#handleQuit" text="Выход" />
+            </items>
+            </Menu>
+            <Menu fx:id="orders" mnemonicParsing="false" text="Заказы">
+                <items>
+                    <MenuItem fx:id="menuOrders" mnemonicParsing="false" text="Заказы" />
+                    <MenuItem fx:id="menuOrderStatus" mnemonicParsing="false" onAction="#handleOrderStatus" text="Статусы заказов" />
+                    <MenuItem fx:id="menuOrderCategory" mnemonicParsing="false" onAction="#handleOrderCategory" text="Категории заказов" />
+                    <MenuItem fx:id="menuOrderAdvert" mnemonicParsing="false" onAction="#handleOrderAdvert" text="Источники заказов" />
+                </items>
+            </Menu>
+            <Menu fx:id="workers" mnemonicParsing="false" text="Мастера">
+                <items>
+                    <MenuItem fx:id="menuWorkers" mnemonicParsing="false" onAction="#handleWorkers" text="Мастера" />
+                    <MenuItem fx:id="menuRegions" mnemonicParsing="false" onAction="#handleRegions" text="Районы" />
+                    <MenuItem fx:id="menuSpecializations" mnemonicParsing="false" onAction="#handleSpecializations" text="Специализации" />
+                    <MenuItem fx:id="menuSubSpecializations" mnemonicParsing="false" onAction="#handleSubSpecializations" text="Виды работ" />
+                </items>
+            </Menu>
+            <Menu fx:id="users" mnemonicParsing="false" text="Пользоватли">
+                <items>
+                    <MenuItem fx:id="menuUsers" mnemonicParsing="false" onAction="#handleUsers" text="Пользователи" />
+                </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>

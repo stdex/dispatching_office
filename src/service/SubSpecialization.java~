@@ -1,0 +1,66 @@
+package service;
+
+import com.mysql.jdbc.JDBC4PreparedStatement;
+import controller.MainApp;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import model.Order;
+import model.SubSpecialization;
+import model.User;
+import model.UserGroup;
+import utils.Database;
+import utils.MD5;
+
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+/**
+ * Created by rostunov on 03.08.15.
+ */
+public class SubSpecializationService {
+
+    public static SubSpecialization data;
+
+    public ObservableList<SubSpecialization> get_list() throws SQLException {
+
+        ObservableList<SubSpecialization> tData = FXCollections.observableArrayList();
+
+        ResultSet rs = MainApp.db.query("SELECT id, title FROM workers_sub_specialization");
+
+        while (rs.next()) {
+            tData.add(new SubSpecialization(Integer.toString(rs.getInt(1)), rs.getString(2)));
+        }
+
+        return tData;
+    }
+
+    public void edit(SubSpecialization data) throws SQLException {
+
+        String updateTableSQL = "UPDATE workers_sub_specialization SET title = ? WHERE id = ?";
+        PreparedStatement preparedStatement = Database.conn.prepareStatement(updateTableSQL);
+        preparedStatement.setString(1, data.getTitle());
+        preparedStatement.setInt(2, Integer.parseInt(data.getId()));
+        System.out.println(((JDBC4PreparedStatement) preparedStatement).asSql());
+        preparedStatement.executeUpdate();
+    }
+
+
+    public void add(SubSpecialization data) throws SQLException {
+
+        String addToTableSQL = "INSERT INTO workers_sub_specialization (title) VALUES (?)";
+        PreparedStatement preparedStatement = Database.conn.prepareStatement(addToTableSQL);
+        preparedStatement.setString(1, data.getTitle());
+        System.out.println(((JDBC4PreparedStatement) preparedStatement).asSql());
+        preparedStatement.executeUpdate();
+    }
+
+    public void remove(SubSpecialization data) throws SQLException {
+
+        String removeFromTableSQL = "DELETE FROM workers_sub_specialization WHERE id = ?";
+        PreparedStatement preparedStatement = Database.conn.prepareStatement(removeFromTableSQL);
+        preparedStatement.setInt(1, Integer.parseInt(data.getId()));
+        System.out.println(((JDBC4PreparedStatement) preparedStatement).asSql());
+        preparedStatement.executeUpdate();
+    }
+}

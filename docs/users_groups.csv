@@ -1,0 +1,8 @@
+/*
+-- Query: SELECT * FROM dispatching_office.users_groups
+LIMIT 0, 1000
+
+-- Date: 2015-08-07 05:16
+*/
+INSERT INTO `users_groups` (`id`,`group_name`) VALUES (1,'Админстратор');
+INSERT INTO `users_groups` (`id`,`group_name`) VALUES (2,'Диспетчер');

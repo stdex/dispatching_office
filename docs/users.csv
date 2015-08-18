@@ -1,0 +1,8 @@
+/*
+-- Query: SELECT * FROM dispatching_office.users
+LIMIT 0, 1000
+
+-- Date: 2015-08-07 05:16
+*/
+INSERT INTO `users` (`id`,`login`,`password`,`fullname`,`group_id`) VALUES (1,'admin','21232f297a57a5a743894a0e4a801fc3','Тестовый администратор',1);
+INSERT INTO `users` (`id`,`login`,`password`,`fullname`,`group_id`) VALUES (2,'disp','7b1111949463c32a5ae41facb8ecb5f8','Тестовый диспетчер',2);
