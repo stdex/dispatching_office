@@ -52,13 +52,19 @@
     <dependency>
       <groupId>org.controlsfx</groupId>
       <artifactId>controlsfx</artifactId>
-      <version>8.40.9</version>
+      <version>8.40.10-SNAPSHOT</version>
     </dependency>
 
       <dependency>
           <groupId>org.jfxtras</groupId>
           <artifactId>jfxtras-controls</artifactId>
           <version>8.0-r4-SNAPSHOT</version>
+      </dependency>
+
+      <dependency>
+          <groupId>com.google.guava</groupId>
+          <artifactId>guava</artifactId>
+          <version>18.0</version>
       </dependency>
 
   </dependencies>
@@ -129,6 +135,7 @@
                 <classPath>
                     <mainClass>controller.MainApp</mainClass>
                 </classPath>
+                <icon>resources/app.ico</icon>
                 <jre>
                     <minVersion>1.8.0</minVersion>
                     <maxVersion>1.9.0</maxVersion>

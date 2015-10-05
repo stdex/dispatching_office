@@ -27,12 +27,21 @@ public class Order {
     public final StringProperty link_user_id;
     public final StringProperty link_user;
     public final StringProperty archive;
+    public final StringProperty region;
+    public final StringProperty region_name;
+    public final StringProperty start_time;
+    public final StringProperty end_time;
+    public final StringProperty price;
+    public final StringProperty link_worker_phone;
+    public final StringProperty annotation;
+    public final StringProperty timer_str;
 
     public Order() {
-        this(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
+        this(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null);
     }
 
-    public Order(String id, String fullname, String phone, String address,  String advert_source_id, String advert_source, String reason, String work_cat_id, String work_cat, String link_worker_id, String link_worker, String work_datetime, String append_datetime, String status_id, String status, String status_color, String link_user_id, String link_user, String archive) {
+
+    public Order(String id, String fullname, String phone, String address,  String advert_source_id, String advert_source, String reason, String work_cat_id, String work_cat, String link_worker_id, String link_worker, String work_datetime, String append_datetime, String status_id, String status, String status_color, String link_user_id, String link_user, String archive, String region, String region_name, String start_time, String end_time, String price, String link_worker_phone, String annotation, String timer_str) {
 
         DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
@@ -55,8 +64,40 @@ public class Order {
         this.link_user_id = new SimpleStringProperty(link_user_id);
         this.link_user = new SimpleStringProperty(link_user);
         this.archive = new SimpleStringProperty(archive);
+        this.region = new SimpleStringProperty(region);
+        this.region_name = new SimpleStringProperty(region_name);
+        this.start_time = new SimpleStringProperty(start_time);
+        this.end_time = new SimpleStringProperty(end_time);
+        this.price = new SimpleStringProperty(price);
+        this.link_worker_phone = new SimpleStringProperty(link_worker_phone);
+        this.annotation = new SimpleStringProperty(annotation);
+        this.timer_str = new SimpleStringProperty(timer_str);
+
     }
 
+    public String getRegion_name() {
+        return region_name.get();
+    }
+
+    public StringProperty region_nameProperty() {
+        return region_name;
+    }
+
+    public void setRegion_name(String region_name) {
+        this.region_name.set(region_name);
+    }
+
+    public String getTimer_str() {
+        return timer_str.get();
+    }
+
+    public StringProperty timer_strProperty() {
+        return timer_str;
+    }
+
+    public void setTimer_str(String timer_str) {
+        this.timer_str.set(timer_str);
+    }
 
     @Override
     public String toString() {
@@ -80,6 +121,14 @@ public class Order {
                 ", link_user_id=" + link_user_id +
                 ", link_user=" + link_user +
                 ", archive=" + archive +
+                ", region=" + region +
+                ", region=" + region_name +
+                ", start_time=" + start_time +
+                ", end_time=" + end_time +
+                ", price=" + price +
+                ", link_worker_phone=" + link_worker_phone +
+                ", annotation=" + annotation +
+                ", timer_str=" + timer_str +
                 '}';
     }
 
@@ -309,5 +358,109 @@ public class Order {
 
     public void setArchive(String archive) {
         this.archive.set(archive);
+    }
+
+    public String getRegion() {
+        return region.get();
+    }
+
+    public StringProperty regionProperty() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region.set(region);
+    }
+
+    public String getRegionName() {
+        return region_name.get();
+    }
+
+    public StringProperty regionNameProperty() {
+        return region_name;
+    }
+
+    public void setRegionName(String region_name) {
+        this.region_name.set(region_name);
+    }
+
+
+    public String getStart_time() {
+        return start_time.get();
+    }
+
+    public StringProperty start_timeProperty() {
+        return start_time;
+    }
+
+    public void setStart_time(String start_time) {
+        this.start_time.set(start_time);
+    }
+
+    public String getEnd_time() {
+        return end_time.get();
+    }
+
+    public StringProperty end_timeProperty() {
+        return end_time;
+    }
+
+    public void setEnd_time(String end_time) {
+        this.end_time.set(end_time);
+    }
+
+    public String getPrice() {
+        return price.get();
+    }
+
+    public StringProperty priceProperty() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price.set(price);
+    }
+
+
+    public String getLink_worker_phone() {
+        return link_worker_phone.get();
+    }
+
+    public StringProperty link_worker_phoneProperty() {
+        return link_worker_phone;
+    }
+
+    public void setLink_worker_phone(String link_worker_phone) {
+        this.link_worker_phone.set(link_worker_phone);
+    }
+
+
+
+    public String getAnnotation() {
+        return annotation.get();
+    }
+
+    public StringProperty annotationProperty() {
+        return annotation;
+    }
+
+    public void setAnnotation(String annotation) {
+        this.annotation.set(annotation);
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Order order = (Order) o;
+
+        return !(id != null ? !id.equals(order.id) : order.id != null);
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
     }
 }

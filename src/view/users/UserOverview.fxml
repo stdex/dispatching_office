@@ -52,7 +52,7 @@
                   </GridPane>
                   <ButtonBar layoutX="54.0" layoutY="250.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
                 <Button layoutX="143.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleNew" text="Создать" />
-                  <Button layoutX="228.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleEdit" prefHeight="26.0" prefWidth="125.0" text="Редактировать" />
+                  <Button layoutX="228.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleEdit" text="Редактировать" />
                   <Button layoutX="362.0" layoutY="558.0" mnemonicParsing="false" onAction="#handleDelete" text="Удалить" />
                </children>
             </AnchorPane>

@@ -13,10 +13,10 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.36" level="project" />
-    <orderEntry type="library" name="Maven: org.controlsfx:controlsfx:8.40.9" level="project" />
-    <orderEntry type="library" name="Maven: org.controlsfx:openjfx-dialogs:1.0.3" level="project" />
+    <orderEntry type="library" name="Maven: org.controlsfx:controlsfx:8.40.10-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jfxtras:jfxtras-controls:8.0-r4-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jfxtras:jfxtras-common:8.0-r4-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: org.jfxtras:jfxtras-fxml:8.0-r4-SNAPSHOT" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:18.0" level="project" />
   </component>
 </module>

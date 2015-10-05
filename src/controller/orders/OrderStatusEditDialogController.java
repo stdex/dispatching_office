@@ -43,6 +43,7 @@ public class OrderStatusEditDialogController {
      */
     @FXML
     private void initialize() {
+
     }
 
     /**
@@ -62,6 +63,7 @@ public class OrderStatusEditDialogController {
     public void setData(Object obj) {
         this.obj = (OrderStatus) obj;
         dField1.setText(this.obj.getTitle());
+        dField1.setDisable(true);
         if(this.obj.getColor() != null) {
             System.out.println(this.obj.getColor());
             if(this.obj.getColor().equals("")) {

@@ -149,7 +149,7 @@ public class MainApp extends Application {
 			mainStage.setTitle("Диспетчерская служба");
 			mainStage.getIcons().add(new Image("file:resources/images/icon.png"));
 			mainStage.setMaximized(true);
-			mainStage.setResizable(false);
+			//mainStage.setResizable(false);
 			//mainStage.setFullScreen(false);
 			//mainStage.setFullScreen(true);
 			//mainStage.setMinWidth(1000.00);

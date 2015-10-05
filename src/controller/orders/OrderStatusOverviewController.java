@@ -2,16 +2,13 @@ package controller.orders;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import model.OrderStatus;
 import model.User;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Label;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
 import service.OrderStatusService;
 import service.UserService;
 import utils.DateUtil;
@@ -31,6 +28,13 @@ public class OrderStatusOverviewController {
     private Label dLabel1;
     @FXML
     private Label dLabel2;
+
+    @FXML
+    private Button dBtn1;
+    @FXML
+    private Button dBtn2;
+    @FXML
+    private Button dBtn3;
 
 
     // Reference to the main application.
@@ -83,6 +87,10 @@ public class OrderStatusOverviewController {
         this.mainApp = mainApp;
         tData = tService.get_list();
         dTable.setItems(tData);
+
+        dBtn1.setDisable(true);
+        dBtn2.setDisable(true);
+        dBtn3.setDisable(true);
     }
 
     public void setEditStage(Stage orderStage){
